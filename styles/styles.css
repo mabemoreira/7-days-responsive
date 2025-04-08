@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url(footer.css);
 :root{
     --fonte-primaria: 'Montserrat', serif;
     --cor-fundo-primaria: #f9f7fe;
@@ -165,14 +165,29 @@ body{
     border: 1px solid var(--cor-botao-ligar);
 }
 
+.video:active{
+    background-color: var(--cor-botao-ligar);
+    color: var(--cor-fundo-header);
+}
+
 .audio:hover{
     background-color: var(--cor-texto-main);
     color: var(--cor-fundo-primaria);
     border: 1px solid var(--cor-fundo-primaria);
 }
 
+.audio:active{
+    border: 1px solid var(--cor-borda-botao);
+    background-color: var(--cor-fundo-primaria);
+    color: var(--cor-texto-main);
+    font-size: 14px;
+}
 .botao__endereco:hover{
     background-color: var(--cor-fundo-primaria);
     color: var(--cor-botao-endereco);
     border: 1px solid var(--cor-botao-endereco);
+}
+.botao__endereco:active{
+    background-color: var(--cor-botao-endereco);
+    color: var(--cor-fundo-header);
 }
