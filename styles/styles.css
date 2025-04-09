@@ -17,6 +17,12 @@ body{
     background-color: var(--cor-fundo-primaria);
     font-size: 16px;
     font-weight: 500;
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    padding-bottom: 3rem;
 }
 
 .cabecalho{
@@ -24,16 +30,16 @@ body{
     display: flex;
     font-family: var(--fonte-primaria);
     justify-content: space-between;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .cabecalho__icones{
     display:flex;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .cabecalho__hora{
-    font-size: 0.875em;
+    font-size: 0.875rem;
     font-weight: 400;
 }
 
@@ -45,7 +51,7 @@ body{
 }
 
 .inicio__foto{
-    height: 65px;
+    height: 4rem;
     border-radius: 50%;
 }
 
@@ -65,21 +71,22 @@ body{
 .botao{
     border-radius: 8px;
     text-decoration: none;
-    padding: 15px 19px;
+    padding: 1rem 1rem;
 }
 
 .video{
     background-color: var(--cor-botao-ligar);
     color: var(--cor-fundo-header);
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-left: 0.2em;
     margin-right: 1.5em;
+    
 }
 
 .audio{
     border: 1px solid var(--cor-borda-botao);
     color: var(--cor-texto-main);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .atendimento__foto{
@@ -144,7 +151,7 @@ body{
 }
 
 .atendimento__horario{
-    font-size: 12px;
+    font-size: 0.75rem;
     color: var(--cor-texto-main);
     margin-left: 0.5em;
     margin-bottom: 0.2em;
@@ -155,9 +162,12 @@ body{
     text-decoration: none;
     background-color: var(--cor-botao-endereco);
     color: var(--cor-fundo-header);
-    padding: 15px 114px;
-    font-size: 14px;
+    padding: 1rem 7.125rem;
+    font-size: 0.875rem;
+    
 }
+
+
 
 .video:hover{
     background-color: var(--cor-fundo-primaria);
@@ -191,3 +201,66 @@ body{
     background-color: var(--cor-botao-endereco);
     color: var(--cor-fundo-header);
 }
+
+
+
+@media screen and (min-width:768px){
+    .dia__consultas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+  
+}
+
+@media screen and (min-width:1440px){
+    .botao-flutuante{
+        display: none;
+    }
+
+    .menu-fixo {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        width: 200px;
+        height: 100vh;
+    }
+
+    .menu-itens{
+        flex-direction: column;
+        justify-content: flex-start; /* Alterado para flex-start */
+        align-items: flex-start; /* Alinhar à esquerda */
+        gap: 2rem; /* Espaçamento reduzido */
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    .menu-icone{
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0.5rem 1rem; 
+    }
+
+    .menu-icone__texto{
+        font-size: 1.5rem; 
+     
+    }
+
+    .menu-icone__imagem{
+        width: 2rem; 
+}
+
+    .cabecalho{
+        display: none;
+    }
+
+    main {
+        margin-left: 200px;
+        padding: 2rem;
+    }
+    
+
+}
+
