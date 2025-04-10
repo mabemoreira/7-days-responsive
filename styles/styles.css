@@ -213,8 +213,8 @@ main{
 }
 
 @media screen and (min-width:1440px){
-    .botao-flutuante{
-        display: none;
+    .botoes__container{
+        display:none;
     }
 
     .menu-fixo {

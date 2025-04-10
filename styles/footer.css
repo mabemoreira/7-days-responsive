@@ -1,23 +1,57 @@
-.botao-flutuante {
+.botoes__container {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    width: 56px;
-    height: 56px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 1rem;
+    z-index: 1001;
+}
+
+
+.botao-flutuante {
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: var(--cor-botao-endereco);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1); /* X=0 Y=4 Blur=16 Spread=0 */
-    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.1)); /* Para áreas transparentes */
-    z-index: 1000;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
 }
 
+.botao-flutuante.principal:focus + .botoes_extras,
+.botoes_extras:focus-within {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
 
+.botoes_extras {
+    display: none;
+    z-index: 1002;
+}
+
+.botao-flutuante:hover {
+    transform: scale(1.1); 
+}
+
+.botao__extra{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botao__extra__texto{
+    font-size: 0.8rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+}
 
 .menu-fixo {
     position: fixed;
@@ -38,6 +72,20 @@
     align-items: center;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; 
+    display: none;
+}
+
+.botao-flutuante.principal:focus ~ .overlay {
+    display: block;
+}
 
 
 .menu-icone{
@@ -57,3 +105,10 @@
     color: var(--cor-botao-endereco);
 }
 
+.menu-icone__texto:hover{
+    color: var(--cor-botao-endereco);
+}
+
+.menu-icone__texto:active{
+    color: var(--cor-texto-secundaria);
+}
